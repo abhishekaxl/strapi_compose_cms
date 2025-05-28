@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "displayName": "Page",
+    "singularName": "page",
+    "pluralName": "pages",
+    "description": "Pages for the site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "publishAt": {
+      "type": "datetime"
+    },
+    "contentSections": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero-banner",
+        "sections.product-slider",
+        "sections.testimonials",
+        "sections.faq-section",
+        "sections.blog-posts-teaser",
+        "sections.rich-text-block",
+        "sections.promotional-cta",
+        "sections.category-highlight",
+        "sections.image-carousel",
+        "sections.feature-grid"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}
